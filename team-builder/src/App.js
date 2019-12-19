@@ -5,44 +5,44 @@ import TeamMembers from "./components/TeamMembers";
 function App() {
 
   let [team, setTeam] = useState([{
-    name: "test",
-    email: "a@b.com",
-    role: "role",
+    name: "Elizabeth",
+    email: "elizabrek@gmail.com",
+    role: "manager",
     id: 0
 }, {
-  name: "test",
-  email: "a@b.com",
-  role: "role",
+  name: "Nick",
+  email: "nick@yahoo.com",
+  role: "director",
   id: 1
 }, {
-name: "test",
-email: "a@b.com",
-role: "role",
+name: "Lily",
+email: "lkanich@yahoo.com",
+role: "engineer",
 id: 2
 }, {
-name: "test",
-email: "a@b.com",
-role: "role",
+name: "Haley",
+email: "haley@swenson.com",
+role: "support specialist",
 id: 3
 }, {
-name: "test",
-email: "a@b.com",
-role: "role",
+name: "Duncan",
+email: "duncan@duncan.com",
+role: "Customer",
 id: 4
 }, {
-name: "test",
-email: "a@b.com",
-role: "role",
+name: "Estelle",
+email: "estelle@stars.com",
+role: "Customer",
 id: 5
 }, {
-name: "test",
-email: "a@b.com",
-role: "role",
+name: "Jessica",
+email: "jessica.p.k@gmail.com",
+role: "Customer",
 id: 6
 }, {
-name: "test",
-email: "a@b.com",
-role: "role",
+name: "Katie",
+email: "katiekatie@yahoo.com",
+role: "Customer",
 id: 7
 }]);
 

@@ -11,9 +11,9 @@ function MemberCard(props) {
     return (
 
         <div className={"memberCard " + cardColor} key={member.name}>
-            <h3 className="memberName">{member.name} (ID {member.id})</h3>
+            <h3 className="memberName">{member.name}</h3>
+            <p className="memberRole">{member.role[0].toUpperCase() + member.role.slice(1, member.role.length)}</p>
             <p className="memberEmail">{member.email}</p>
-            <p className="memberRole">{member.role}</p>
             <p className="edit"><a href="#" onClick={editFunction}>(edit)</a></p>
         </div>
 

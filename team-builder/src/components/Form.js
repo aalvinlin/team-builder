@@ -24,32 +24,29 @@ function Form(props) {
     const [input, setInput] = useState(blankEntry);
 
     // on form submission, prevent default behavior
-    function submitForm(element) {
+    // store new member info into state variable
+    function submitForm(event) {
         
-        element.target.preventDefault();
+        console.log("adding", input);
+
+        event.preventDefault();
+
+        //add member to team
+        setTeam([...currentTeam, input]);
+
+        // update current team count
+        setCurrentTeamCount(currentTeamCount + 1);
+
+        // reset input fields for next entry
+        setInput({...blankEntry, id: currentTeamCount + 1});
     }
 
     // take user's current input and update state variable "input"
-    function storeInput(element) {
+    function storeInput(event) {
 
-        // setCurrentTeamCount(currentTeamCount + 1);
-        count++;
-        setInput({...input, [element.target.name]: element.target.value});
-        setInput({...input, id: count});
+        setInput({...input, [event.target.name]: event.target.value}); 
         
     }
-
-    // add the new team member's info to the state variable "currentTeam"
-    // also increment "currentTeamCount" by 1
-    function addMember() {
-        setTeam([...currentTeam, input]);
-        // setCurrentTeamCount(currentTeamCount + 1);
-
-
-
-        console.log(currentTeamCount);
-    }
-
 
     // update button text based on whether user is adding or editing a team member
     const [buttonText, setButtonText] = useState("");
@@ -66,15 +63,15 @@ function Form(props) {
 
         <form name="teamForm" onSubmit={submitForm}>
             <label htmlFor="inputName">Name:</label>
-            <input type="text" name="name" onChange={storeInput}/>
+            <input type="text" name="name" onChange={storeInput} value={input.name}/>
 
             <label htmlFor="inputEmail">Email:</label>
-            <input type="text" name="email"  onChange={storeInput}/>
+            <input type="text" name="email"  onChange={storeInput} value={input.email}/>
 
             <label htmlFor="inputName">Role:</label>
-            <input type="text" name="role"  onChange={storeInput}/>
+            <input type="text" name="role"  onChange={storeInput} value={input.role}/>
 
-            <input type="button" onClick={addMember} value={buttonText} />
+            <input type="submit" value={buttonText} />
 
         </form>
 
