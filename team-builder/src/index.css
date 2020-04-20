@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+  font-size: 62.5%;
+
+  font-family: Verdana;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.App {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2% auto;
+}
+
+.header {
+  background-color: lavender;
+  box-shadow: 2px 2px 2px #999999;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 0;
+  padding-top: 1rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1rem;
+}
+
+form {
+  text-align: center;
+}
+
+label, input {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  margin: 1rem;
+  padding: 0 0.5rem;
+}
+
+input[type="text"] {
+  width: 15%;
+}
+
+.memberCardContainer {
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.memberCard {
+
+  width: 24%;
+
+  margin: 0.5%;
+
+  background-color: lightseagreen;
+  padding: 1rem;
+  box-shadow: 2px 2px 2px #999999;
+
+}
+
+.memberName {
+  font-size: 1.5rem;
+  margin-top: 0rem;
+}
+
+.memberEmail, .memberRole {
+  font-size: 1rem;
+}
+
+.memberRole {
+  font-style: oblique;
+}
+
+.edit {
+  font-size: 0.75rem;
+  text-align: right;
+  margin: -0.5rem 0;
+}
+
+.edit a {
+  color: #333333;
+  text-decoration: none;
+}
+
+.edit a:hover, .edit a:active {
+  color: #999999;
+  text-decoration: none;
+}
+
+.memberCard.green {
+  background-color: lightseagreen;
+}
+
+.memberCard.blue {
+  background-color: lightblue;
+}
+
+.memberCard.pink {
+  background-color: lightpink;
+}
+
+.memberCard.orange {
+  background-color: lightsalmon;
+}
+
+.memberCard.yellow {
+  background-color: lightgoldenrodyellow;
+}
